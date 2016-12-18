@@ -1,0 +1,4 @@
+<solution to crumpet - treacle>
+Path: crumpet --> precut --> capture --> carpet --> plectra --> cartel --> treacle
+Steps: 6
+--- 1.15206813812 seconds ---

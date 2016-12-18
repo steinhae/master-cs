@@ -1,0 +1,4 @@
+<solution to lead - gold>
+Path: lead --> glade --> gaoled --> lodge --> gold
+Steps: 4
+--- 0.912539958954 seconds ---
