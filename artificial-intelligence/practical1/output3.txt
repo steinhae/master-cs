@@ -1,0 +1,4 @@
+<solution to apple - pear>
+Path: apple --> leap --> paler --> pear
+Steps: 3
+--- 0.875678062439 seconds ---

@@ -1,0 +1,4 @@
+<solution to croissant - baritone>
+Path: croissant --> carotins --> creations --> notaries --> baritones --> baritone
+Steps: 5
+--- 1.07541704178 seconds ---
