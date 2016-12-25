@@ -1,0 +1,6 @@
+language ESSENCE' 1.0
+$ Minion SolverNodes: 3
+$ Minion SolverTotalTime: 0.046875
+$ Minion SolverTimeOut: 0
+$ Savile Row TotalTime: 0.404
+letting people be [12, 10, 7, 10, 10, 7, 7, 7;int(0..7)]

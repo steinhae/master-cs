@@ -1,0 +1,59 @@
+language ESSENCE' 1.0
+letting   RANGE be domain int(4,7,10,12)
+letting   COLUMNS be domain int(0..7)   $mum = 0, brother = 1, grandma = 2, grandpa = 3, cousin = 4, aunt = 5, uncle = 6, so = 7
+letting   mum=0
+letting	  brother=1
+letting	  grandma=2
+letting	  grandpa=3
+letting	  cousin=4
+letting	  aunt=5
+letting	  uncle=6
+letting	  so=7
+
+find      people: matrix indexed by [COLUMNS] of RANGE
+
+such that
+
+	$1 Assured by design
+
+	$2 You have a total budget of 52 DM
+	(sum(people) <= 52),
+
+	$3 Your mum, brother and significant other must get different presents
+	(people[mum] != people[brother]),
+	(people[brother] != people[so]),
+	(people[mum] != people[so]),
+	
+	$4 Your uncle and cousin must get different presents
+	(people[uncle] != people[cousin]),
+
+	$5 Your grandparents must get different presents
+	(people[grandma] != people[grandpa]),
+	
+	$6 Your mum and uncle must get different presents
+	(people[mum] != people[uncle]),
+	
+	$7 You cannot get chocolates for your mum, brother, significant other or grandpa
+	(people[mum] != 4 /\ people[brother] != 4 /\ people[so] != 4 /\ people[grandpa] != 4),
+	
+	$8 Your cousin must not get socks
+	(people[cousin] != 7),
+	
+	$9 There is only one coffee mill
+	exists a : int(0..7) .
+		forAll b : int (0..7) .
+			(people[b] = 12 <-> b = a),
+	
+	$10 There are no more than 2 CDs
+	exists a,b : int(0..7) .
+		(forAll c : int(0..7) . people[c] = 10 -> (c = a \/ c = b)),
+	
+	$11 There are no more than 4 boxes of chocolates
+	exists a,b,c,d : int(0..7) .
+		(forAll e : int(0..7) . people[e] = 4 -> (e = a \/ e = b \/ e = c \/ e = d)),
+	
+	$12 Your brother must get a CD
+	(people[brother] = 10)
+
+	
+	
