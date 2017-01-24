@@ -20,17 +20,16 @@ such that
 	(people[cousin] != 7),
 	
 	$9 There is only one coffee mill
-	exists a : int(0..7) .
-		forAll b : int (0..7) .
-			(people[b] = 12 <-> b = a),
+	forAll a,b : int(0..7) . 
+		((people[a] = 12 /\ people[b] = 12) -> (a = b)),
 	
 	$10 There are no more than 2 CDs
-	exists a,b : int(0..7) .
-		(forAll c : int(0..7) . people[c] = 10 -> (c = a \/ c = b)),
+	forAll a,b,c : int(0..7) . 
+		((people[a] = 10 /\ people[b] = 10 /\ people[c] = 10) -> (a = b \/ b = c \/ a = c)),
 	
 	$11 There are no more than 4 boxes of chocolates
-	exists a,b,c,d : int(0..7) .
-		(forAll e : int(0..7) . people[e] = 4 -> (e = a \/ e = b \/ e = c \/ e = d)),
+	forAll a,b,c,d,e : int(0..7) .
+		((people[a] = 4 /\ people[b] = 4 /\ people[c] = 4 /\ people[d] = 4 /\ people[e] = 4 ) -> (a = b \/ b = c \/ a = c \/ c = d \/ d = e \/ a = e \/ b = e \/ a = d \/ b = d \/ c = e)),
 	
 	$12 Your brother must get a CD
 	(people[brother] = 10),
