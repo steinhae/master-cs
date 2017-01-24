@@ -25,15 +25,15 @@ Please find the solutions below. The first line contains the people vector as it
 The following lines respectively contain the interpreted people vector.
 
 [Solution to CSP3]
-letting people be [7, 10, 7, 7, 10, 7, 7, 12;int(0..7)]
-mum = 7
+letting people be [12, 10, 7, 7, 10, 7, 7, 7;int(0..7)]
+mum = 12
 brother = 10
 grandma = 7
 grandpa = 7
 cousin = 10
 aunt = 7
 uncle = 7
-so = 12
+so = 7
 
 [Solution to CSP4]
 letting people be [12, 10, 7, 10, 10, 7, 7, 7;int(0..7)]
@@ -47,12 +47,12 @@ uncle = 7
 so = 7
 
 [Solution to CSP5]
-letting people be [7, 10, 4, 7, 4, 4, 10, 12;int(0..7)]
-mum = 7
+letting people be [12, 10, 4, 7, 4, 4, 7, 7;int(0..7)]
+mum = 12
 brother = 10
 grandma = 4
 grandpa = 7
 cousin = 4
 aunt = 4
-uncle = 10
-so = 12
+uncle = 7
+so = 7
